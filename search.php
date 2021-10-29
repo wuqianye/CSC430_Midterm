@@ -9,6 +9,31 @@
         <title>Search</title>
     </head>
     <body>
-        
+        <div>
+            <form action="search.php" method="POST">
+                <input id="search" name="search" type="number" placeholder="Enter Member ID">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div>
+            <?php
+                include 'includes/dbconnect.inc.php';
+
+                $key = trim(stripslashes(htmlspecialchars($_POST["key"])));
+
+                $query = 'SELECT * FROM members WHERE member_id = ?';
+                $stmt = $conn->prepare($query);
+                $stmt->bind_param('i', $key);
+                $stmt->execute();
+                $result = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+                if (!$result) exit ('No Result');
+                if ($result) {
+                ?>
+                    <!-- display result -->
+                    
+                <?php
+                }
+            ?>
+        </div>
     </body>
 </html>
