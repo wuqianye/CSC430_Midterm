@@ -11,7 +11,7 @@
         $member_name = trim(stripslashes(htmlspecialchars($_POST['member_name'])));
         $address = trim(stripslashes(htmlspecialchars($_POST['address'])));
         $phone = trim(stripslashes(htmlspecialchars($_POST['phone'])));
-        $membersip_id = trim(stripslashes(htmlspecialchars($_POST['membership_id'])));
+        $membership_id = trim(stripslashes(htmlspecialchars($_POST['membership_id'])));
         $member_since = date('m-d-Y');
         $member_expires = date('m-d-Y', strtotime('+1 year'));
 

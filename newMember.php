@@ -9,6 +9,24 @@
         <title>New Member</title>
     </head>
     <body>
+        <!-- navbar -->
+        <div>
+
+        </div>
+        <!-- form for member information, needs
+            ~ member_name, string
+            ~ address, phone, string
+            ~ membership_id, integer (use <select>)
+                `type of membership: silver(0), gold(1), business(2)
+        -->
+        <div>
+                <form action="includes/addMember.inc.php" method="POST">
+                <!-- input fields below -->
+
+
+                <button type="submit" name="addMemberSubmit">Submit</button>
+            </form>
+        </div>
         
     </body>
 </html>
